@@ -11,10 +11,11 @@ function render(list) {
       <img src="../data/${fish.localImagePath}" alt="${fish.species}">
       <div>
         <a href=${fish.speciesUrl}>
-        <strong>${fish.species}</strong><br>
-        </a>
+        <strong>${fish.species}</strong>
+        </a><br>
         <em>${fish.family}</em><br>
-        <small>${fish.other}</small>
+        <small>${fish.other}</small><br>
+        <small>${fish.nameInTerritory}</small>
       </div>
     `;
     results.appendChild(div);
@@ -26,7 +27,8 @@ input.addEventListener('input', () => {
   const filtered = fishData.filter(fish =>
     fish.species.toLowerCase().includes(keyword) ||
     fish.family.toLowerCase().includes(keyword) ||
-    fish.other.toLowerCase().includes(keyword)
+    fish.other.toLowerCase().includes(keyword) ||
+    fish.nameInTerritory.toLowerCase().includes(keyword)
   );
   render(filtered);
 });

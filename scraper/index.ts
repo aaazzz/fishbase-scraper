@@ -24,6 +24,7 @@ async function scrapeFishList() {
     const other = $(cols[0]).text().trim();
     const family = $(cols[1]).text().trim();
     const speciesEl = $(cols[2]).find("a");
+    const nameInTerritory = $(cols[5]).text().trim();
     const species = speciesEl.text().trim();
     const speciesHref = speciesEl.attr("href");
 
@@ -35,6 +36,7 @@ async function scrapeFishList() {
       other,
       family,
       species,
+      nameInTerritory,
       speciesUrl,
     });
   });
