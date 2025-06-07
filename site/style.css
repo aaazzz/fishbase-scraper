@@ -1,0 +1,26 @@
+
+body {
+  font-family: sans-serif;
+  max-width: 1000px;
+  margin: auto;
+  padding: 1em;
+}
+#search {
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1em;
+}
+.fish {
+  display: flex;
+  align-items: center;
+  margin-top: 1em;
+  gap: 1em;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 1em;
+}
+.fish img {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid #ccc;
+}
